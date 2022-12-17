@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    width: 100%;
+    font-size: 3em;
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
+
+}
+
+.container-slide {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 50vh;
+    background-color: gray;
+    margin: 20vh auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.596);
+}
+
+.container-items {
+    position: absolute;
+    display: flex;
+    width: 400px;
+    height: 50vh;
+    background-color: transparent;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.item {
+    width: 400px;
+    height: 50vh;
+    transition: all 1s;
+}
+
+.item:first-child {
+    margin-left: -100%;
+}
+
+.item img {
+    width: 400px;
+    height: 50vh;
+    border-radius: 15px;
+}
+
+.action-button {
+    font-size: 60px;
+    font-weight: bold;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    user-select: none;
+    width: 50px;
+    transition: all 1s;
+}
+
+.action-button:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.589);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+@media screen and (orientation: portrait) {
+    .container-items, .container-slide, .item {
+        width: 350px;
+    }
+
+    body {
+        background-image: url(background-mobile.jpg);
+        background-position: center;
+    }
+
+    h1 {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px black;
+    }
+
+    .container-slide {
+        margin: 40px auto;
+    }
+    
+}
